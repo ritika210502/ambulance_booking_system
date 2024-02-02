@@ -1,0 +1,45 @@
+* {
+    margin: 2px;
+    padding: 2px;
+    font-family: sans-serif;
+}
+.title{
+    font-style:italic;
+}
+
+.signup-container-fluid {
+    background-color: beige;
+    padding: 3rem;
+    max-height: auto;
+}
+
+.signup-container {
+    background-color: rgb(218, 61, 61);
+    min-height: 500px;
+    max-width: 500px;
+    justify-content: center;
+    text-align: center;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 3px 5px 4px;
+
+}
+.signuplabel{
+    color:white;
+    font-weight: bolder;
+}
+.signuprow{
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+}
+.submit{
+    background-color: lightgray;
+    color:red;
+    font-weight: bold;
+}
+#inputPost{
+    margin: 2px;
+    padding: 2px;
+    font-family: sans-serif;
+}

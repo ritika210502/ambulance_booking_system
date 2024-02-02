@@ -1,0 +1,29 @@
+*{
+    font-size:14px;
+    font-style:'Lucida Grande';
+}
+
+.main{
+    margin: auto;
+    padding: 50px;
+    /* background-color: rgba(228,162,162,0.53); */
+    background-color: rgb(244, 171, 171);
+    width:100%;
+    justify-content: center;
+    align-items: center;
+
+}
+.mainbox{
+    margin: auto;
+    padding: 50px;
+    width:790px;
+    background-color: #eee4e4;
+   
+}
+.heading{
+    color:red;
+    font-weight: bolder;
+}
+.subclass{
+    background-color: red;
+}

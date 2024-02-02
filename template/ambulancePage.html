@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/userPage.css">
+
+    <title>AMBULANCE PAGE</title>
+  </head>
+  <body>
+
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+          <a class="nav-link active" aria-current="page">REGISTER </a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="amb_view">VIEW BOOKING</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="nearby_hos">VIEW NEAREST HOSPITAL</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">ABOUT US</a>
+      </li>
+  </ul>
+    </div>
+  
+    <div class="container-fluid main">
+      <div class="container mainbox">
+        {% for message in messages %}
+            <div class="alert alert-danger">
+                <a class="close" href="#" data-dismiss="alert"></a>
+                {{message}}
+            </div>
+            {%endfor %}
+          <form method="POST" action="avAmbulance" class="row g-3 needs-validation" novalidate>
+              {% csrf_token %}
+              <em> <h1>REGISTER YOUR AMBULANCE NOW</h1></em>
+              <h6 class="heading">HOSPITAL NAME:</h6>
+              <div class="col-md-4 ">
+                  <label for="validationCustom01" class="form-label">Hospital Name*</label>
+                  <input type="text" name="name" class="form-control" id="validationCustom01" placeholder="LIFELINE HOSPITAL" required>
+              </div>
+              <h6 class="heading">CONTACT INFO.</h6>
+              <span>NOTE: enter same email used in login</span>
+              <div class="col-md-4">
+                  <label for="validationCustom06" class="form-label">Email *</label>
+                  <input type="email" name="email" class="form-control" id="validationCustom06" required>
+              </div>
+              <div class="col-md-4">
+                  <label for="validationCustom05" class="form-label">Phone No. *</label>
+                  <input type="tel" name="phNo" class="form-control" id="validationCustom05" required>
+              </div>
+  
+              <h6 class="heading">ADDRESS *</h6>
+              <div class="col-md-4">
+                  <label for="validationCustom03" class="form-label">Street Address</label>
+                  <input type="text" name="Street" class="form-control" id="validationCustom03" required>
+                  <div class="invalid-feedback">
+                      Please provide a valid street.
+                  </div>
+              </div>
+  
+              <div class="col-md-4">
+                  <label for="validationCustom03" class="form-label">City</label>
+                  <input type="text" name="City" class="form-control" id="validationCustom03" required>
+                  <div class="invalid-feedback">
+                      Please provide a valid city.
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <label for="validationCustom04" class="form-label">State</label>
+                  <input type="text" name="State" class="form-control" id="validationCustom04" required>
+                  <div class="invalid-feedback">
+                      Please select a valid state.
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <label for="validationCustom05" class="form-label">Zip</label>
+                  <input type="text" name="Zip" class="form-control" id="validationCustom05" required>
+                  <div class="invalid-feedback">
+                      Please provide a valid zip.
+                  </div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom05" class="form-label">no of ambulance available in your hospital</label>
+                <input type="number" name="NoOfAmb" min="1" class="form-control" required>
+                <div class="invalid-feedback">
+                    Please provide a valid number.
+                </div>
+            </div>
+           
+              <div class="col-12">
+                  <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                          Agree to terms and conditions
+                      </label>
+                      <div class="invalid-feedback">
+                          You must agree before submitting.
+                      </div>
+                  </div>
+              </div>
+              <div class="col-12 ">
+                  <button class="btn btn-primary subclass" type="submit">Submit form</button>
+              </div>
+          </form>
+      </div>
+  </div>
+  
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+  
+  </body>
+</html>

@@ -1,0 +1,45 @@
+
+body{
+    background-color:rgba(245, 245, 220, 0.605);
+   
+
+}
+.main-title{
+    text-align: center;
+    margin: 2rem;
+    padding: 2rem;
+}
+.cardcol{
+    margin-top: 5px;
+    padding-top:5px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    justify-content: center;
+    text-align: center;
+}
+.title-2{
+  color:white;
+}
+
+/* .ambulance {
+    animation-name: ambulance;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes ambulance {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  } */
+  .imgs{
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    justify-content: center;
+  }
+  
